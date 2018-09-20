@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "next",
-    "build": "concurrently --kill-others \"micro api.js -l tcp://0.0.0.0:3001\" \"next build && next export\""
+    "dev": "concurrently 'micro api.js -l tcp://0.0.0.0:3001' 'next'",
+    "build": "concurrently --kill-others 'micro api.js -l tcp://0.0.0.0:3001' 'next build && next export'"
   },
   "dependencies": {
     "axios": "^0.18.0",
